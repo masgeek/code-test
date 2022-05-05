@@ -62,4 +62,17 @@ class BinarySearchTest {
 
         assertEquals(3, position);
     }
+
+    @Test
+    void check_position_of_non_matching_recursively() {
+        int[] elements = {};
+        int theElement = 6;
+        int low = 0;
+        int high = elements.length - 1;
+
+        BinarySearch binarySearch = new BinarySearch();
+        int position = binarySearch.recursive(elements, theElement, low, high);
+
+        assertEquals(-1, position);
+    }
 }
