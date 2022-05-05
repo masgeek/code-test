@@ -48,18 +48,22 @@ public class BinarySearch {
      */
     public int recursive(int[] elements, int theElement, int low, int high) {
         if (low > high) {
+            System.out.print("Exceeded");
             return -1;
         }
 
         //find the flow
         int mid = low + ((high - low) / 2);
 
-        if (theElement == elements[mid]) {
+
+        if (elements[mid] == theElement) {
             return mid;
-        } else if (theElement < elements[mid]) {
-            recursive(elements, theElement, low, mid - 1);
+        }
+        
+        if (theElement < elements[mid]) {
+            return recursive(elements, theElement, low, mid - 1);
         } else if (theElement > elements[mid]) {
-            recursive(elements, theElement, mid + 1, high);
+            return recursive(elements, theElement, mid + 1, high);
         }
 
         return -1;
