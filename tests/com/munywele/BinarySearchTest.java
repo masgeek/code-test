@@ -79,13 +79,13 @@ class BinarySearchTest {
     @Test
     void testThis(){
         int[] elements = {-1,0,3,5,9,12};
-        int theElement = 9;
+        int theElement = 2;
         int low = 0;
         int high = elements.length - 1;
 
         BinarySearch binarySearch = new BinarySearch();
         int position = binarySearch.recursive(elements, theElement, low, high);
 
-        assertEquals(4, position);
+        assertEquals(-1, position);
     }
 }
