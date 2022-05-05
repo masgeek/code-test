@@ -4,7 +4,7 @@ public class BinarySearch {
 
     /**
      * The function takes in an array of integers and an integer to search for. It returns the index of the
-     * integer in the array if it is found, otherwise it returns -1
+     * integer in the array if it is found, otherwise it returns -1 O(n)
      *
      * @param elements   the array of elements to search through
      * @param theElement the element we are looking for
@@ -39,7 +39,7 @@ public class BinarySearch {
     /**
      * If the element is not in the array, return -1. Otherwise, find the middle of the array, and if the
      * element is less than the middle, recursively call the function on the lower half of the array.
-     * Otherwise, recursively call the function on the upper half of the array
+     * Otherwise, recursively call the function on the upper half of the array O(log n)
      *
      * @param elements   the array of elements to search through
      * @param theElement the element we are looking for
