@@ -59,7 +59,7 @@ public class BinarySearch {
         } else if (theElement < elements[mid]) {
             recursive(elements, theElement, low, mid - 1);
         } else if (theElement > elements[mid]) {
-            recursive(elements, theElement, low + 1, high);
+            recursive(elements, theElement, mid + 1, high);
         }
 
         return -1;
