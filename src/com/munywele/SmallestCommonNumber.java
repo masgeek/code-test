@@ -1,7 +1,6 @@
 package com.munywele;
 
 
-import java.time.temporal.ValueRange;
 import java.util.*;
 
 /**
@@ -31,25 +30,9 @@ public class SmallestCommonNumber {
             commonNumbers.put(val, 1);
         }
 
-        for (int x2 = 0; x2 < arr2.length - 1; x2++) {
-            int val = arr2[x2];
-            if (commonNumbers.containsKey(val)) {
-                int counter = commonNumbers.get(val);
-                commonNumbers.put(val, counter + 1);
-            } else {
-                commonNumbers.put(val, 1);
-            }
-        }
+        iterateTheArray(arr2, commonNumbers);
 
-        for (int x3 = 0; x3 < arr3.length - 1; x3++) {
-            int val = arr3[x3];
-            if (commonNumbers.containsKey(val)) {
-                int counter = commonNumbers.get(val);
-                commonNumbers.put(val, counter + 1);
-            } else {
-                commonNumbers.put(val, 1);
-            }
-        }
+        iterateTheArray(arr3, commonNumbers);
 
         //evaluate the numbers in the hashmap
         int smallestCommonNumber = -1;
@@ -63,5 +46,17 @@ public class SmallestCommonNumber {
             }
         }
         return smallestCommonNumber;
+    }
+
+    private void iterateTheArray(int[] theArr, Map<Integer, Integer> commonNumbers) {
+        for (int x3 = 0; x3 < theArr.length - 1; x3++) {
+            int val = theArr[x3];
+            if (commonNumbers.containsKey(val)) {
+                int counter = commonNumbers.get(val);
+                commonNumbers.put(val, counter + 1);
+            } else {
+                commonNumbers.put(val, 1);
+            }
+        }
     }
 }
