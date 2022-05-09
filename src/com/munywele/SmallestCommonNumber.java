@@ -4,7 +4,24 @@ package com.munywele;
 import java.time.temporal.ValueRange;
 import java.util.*;
 
+/**
+ * The class takes in three arrays and returns the smallest common number in the three arrays
+ */
 public class SmallestCommonNumber {
+
+
+    /**
+     * We iterate through each array and store the numbers in a hashmap. The key is the number and the
+     * value is the number of times the number appears in the arrays. We then iterate through the
+     * hashmap and find the number that appears the most
+     * 
+     * Complexity is O(n)
+     * 
+     * @param arr1 [6, 7, 10, 25, 30, 63, 64]
+     * @param arr2 [6, 7, 10, 25, 30, 63, 64]
+     * @param arr3 [6, 7, 10, 25, 30, 63, 64]
+     * @return The smallest common number in the three arrays.
+     */
     public int findSmallestCommonNumber(int[] arr1, int[] arr2, int[] arr3) {
 
         Map<Integer, Integer> commonNumbers = new HashMap<>();
