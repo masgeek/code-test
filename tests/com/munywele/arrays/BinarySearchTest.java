@@ -1,5 +1,6 @@
-package com.munywele;
+package com.munywele.arrays;
 
+import com.munywele.arrays.BinarySearch;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

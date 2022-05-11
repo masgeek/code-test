@@ -1,4 +1,4 @@
-package com.munywele;
+package com.munywele.arrays;
 
 import java.util.HashMap;
 import java.util.Map;

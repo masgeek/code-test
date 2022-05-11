@@ -1,5 +1,6 @@
-package com.munywele;
+package com.munywele.arrays;
 
+import com.munywele.arrays.SmallestCommonNumber;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
