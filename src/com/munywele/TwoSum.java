@@ -4,6 +4,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TwoSum {
+    /**
+     * For each element in the array, check if there is another element that sums to the target
+     * 
+     * @param nums an array of integers
+     * @param target the target sum
+     * @return The index of the two numbers that add up to the target.
+     */
     public int[] computeSum(int[] nums, int target) {
 
         int len = nums.length - 1;
@@ -17,6 +24,16 @@ public class TwoSum {
         return new int[]{-1, -1};
     }
 
+    /**
+     * We start with the left and right pointers at the beginning and end of the array, respectively.
+     * We then move the right pointer to the left until the sum of the two numbers is equal to the
+     * target. If the sum is greater than the target, we move the right pointer to the left. If the sum
+     * is less than the target, we move the left pointer to the right
+     * 
+     * @param nums [1,2,3,4,5,6,7,8,9,10]
+     * @param target the target sum
+     * @return The indices of the two numbers that add up to the target.
+     */
     public int[] computeSumSlide(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
