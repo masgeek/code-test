@@ -1,8 +1,13 @@
 package com.munywele.arrays;
 
+/**
+ * The class contains two methods that return the index of the first and last occurrence of a target
+ * value in an array
+ */
 public class LowHighIndex {
+
     /**
-     * > The function iterates through the array and returns the index of the first encounter of the
+     * The function iterates through the array and returns the index of the first encounter of the
      * target value
      * 
      * @param nums the array of integers to search

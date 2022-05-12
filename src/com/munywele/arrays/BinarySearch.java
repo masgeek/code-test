@@ -1,5 +1,9 @@
 package com.munywele.arrays;
 
+/**
+ * The function takes in an array of integers and an integer to search for. It returns the index of the
+ * integer in the array if it is found, otherwise it returns -1
+ */
 public class BinarySearch {
 
     /**

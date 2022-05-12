@@ -2,6 +2,10 @@ package com.munywele.arrays;
 
 import java.util.*;
 
+/**
+ * I'm using a map to store the zeroes and their index, then I'm using a new array to store the zeroes
+ * first, then I'm merging the old array with the new array
+ */
 public class MoveZero {
     /**
      * I'm using a map to store the zeroes and their index, then I'm using a new array to store the

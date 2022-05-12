@@ -1,8 +1,17 @@
 package com.munywele.dynamic;
 
 
+/**
+ * This class is a Fibonacci sequence generator
+ */
 public class Fibonacci {
 
+    /**
+     * The function takes in an integer n and returns the nth number in the Fibonacci sequence
+     * 
+     * @param n the number of the Fibonacci sequence you want to return
+     * @return The last number in the sequence.
+     */
     public int getFibonacci(int n) {
 
         if (n == 0 || n == 1) {
