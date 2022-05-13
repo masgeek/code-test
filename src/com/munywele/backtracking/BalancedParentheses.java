@@ -49,6 +49,7 @@ public class BalancedParentheses {
         if (close < open) {
             result.append("}");
             generateParentheses(resultHolder, result, size, open, close + 1);
+            // Removing the last character from the string.
             result.deleteCharAt(result.length() - 1);
         }
     }
@@ -72,6 +73,7 @@ public class BalancedParentheses {
             generateParentheses(resultHolder, result + "{", size, open + 1, close);
         }
         if (open > close) {
+            // Adding a closing bracket to the result string and then recursing.
             generateParentheses(resultHolder, result + "}", size, open, close + 1);
         }
     }
