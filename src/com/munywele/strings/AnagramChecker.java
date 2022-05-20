@@ -3,6 +3,14 @@ package com.munywele.strings;
 import java.util.*;
 
 public class AnagramChecker {
+    /**
+     * We create two maps, one for each string. We then compare the occurrences of each character in
+     * the two maps. If the occurrences are the same, then the strings are anagrams
+     * 
+     * @param s the first string
+     * @param t "anagram"
+     * @return The method is returning a boolean value.
+     */
     public boolean isAnagram(String s, String t) {
         if(s==null||t==null){
             return false;
@@ -15,25 +23,9 @@ public class AnagramChecker {
         boolean isAnagram = true;
         Map<Character,Integer> lookup = new HashMap<>();
         Map<Character,Integer> lookup2 = new HashMap<>();
-        for(int x=0; x<s.length();x++){
-            char ch = s.charAt(x);
-            if(lookup.containsKey(ch)){
-                int count = lookup.get(ch);
-                lookup.put(ch,count+1);
-            }else {
-                lookup.put(ch, 1);
-            }
-        }
 
-        for(int x=0; x<t.length();x++){
-            char ch = t.charAt(x);
-            if(lookup2.containsKey(ch)){
-                int count = lookup2.get(ch);
-                lookup2.put(ch,count+1);
-            }else {
-                lookup2.put(ch, 1);
-            }
-        }
+        mapCharacters(s, lookup);
+        mapCharacters(t, lookup2);
 
         //compare the occurrences
         for(Map.Entry<Character,Integer> map1:lookup.entrySet()){
@@ -47,5 +39,24 @@ public class AnagramChecker {
         }
 
         return isAnagram;
+    }
+
+    /**
+     * For each character in the string, if the character is already in the map, increment the count of
+     * that character by 1, otherwise add the character to the map with a count of 1
+     * 
+     * @param str The string to be mapped
+     * @param map A map of characters to their count.
+     */
+    private void mapCharacters(String str, Map<Character, Integer> map) {
+        for(int x=0; x<str.length();x++){
+            char ch = str.charAt(x);
+            if(map.containsKey(ch)){
+                int count = map.get(ch);
+                map.put(ch,count+1);
+            }else {
+                map.put(ch, 1);
+            }
+        }
     }
 }
