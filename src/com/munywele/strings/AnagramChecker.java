@@ -31,8 +31,11 @@ public class AnagramChecker {
         for(Map.Entry<Character,Integer> map1:lookup.entrySet()){
             char value = map1.getKey();
             int counter = map1.getValue();
-            int counterb = lookup2.getOrDefault(value,0);
-            if(counter!=counterb){
+            int counterB = 0;
+            if(lookup2.containsKey(value)){
+                counterB = lookup2.get(value);
+            }
+            if(counter!=counterB){
                 return false;
             }
 
