@@ -5,6 +5,23 @@ import java.util.Iterator;
 
 public class StringCompression {
 
+    /**
+     * The function takes a string and returns a compressed version of the string. 
+     * 
+     * The function works by iterating through the string and keeping track of the number of times a
+     * character appears in a row. 
+     * 
+     * The function then builds a new string with the character and the number of times it appears in a
+     * row. 
+     * 
+     * If the new string is longer than the original string, the original string is returned. 
+     * 
+     * The function is O(n) because it iterates through the string once. 
+     * 
+     * 
+     * @param str the string to compress
+     * @return The compressed string.
+     */
     public String compressString(String str) {
         int stringCount = 0;
         char lastChar = 0;
@@ -41,6 +58,9 @@ public class StringCompression {
         return tempString.toString();
     }
 
+    /**
+     * A class that holds a character and the number of times it appears in a string.
+     */
     class StringHolder{
         char strValue;
         int strCount;

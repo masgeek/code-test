@@ -1,11 +1,9 @@
 package com.munywele.strings;
 
 import java.util.*;
-/**
- * It takes a char array, converts it to a string, splits the string at the spaces, reverses the split
- * string, and returns the reversed string
- */
+
 public class ReverseWord {
+ 
     /**
      * It takes a char array, converts it to a string, splits the string at the spaces, reverses the
      * split string, and returns the reversed string
