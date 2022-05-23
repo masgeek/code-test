@@ -6,7 +6,7 @@ public class MissingNumber {
     /**
      * It iterates through the list, and if the list doesn't contain the current number, it returns the
      * current number
-     * Time complexity is O(n^2)
+     * Time complexity is O(n)
      *
      * @param input a list of integers
      * @return The number that is missing from the list.
@@ -41,5 +41,8 @@ public class MissingNumber {
 
         int sumOfElements = (n*(n + 1)) / 2;
         return sumOfElements - numberSum;
+
+
+
     }
 }

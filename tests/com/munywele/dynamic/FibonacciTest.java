@@ -16,8 +16,9 @@ class FibonacciTest {
 
     @Test
     void compute_fibonacci() {
-        int result = fibonacci.getFibonacci(8);
+        int result = fibonacci.getFibonacci(3);
 
+        System.out.println(result);
         assertEquals(21, result);
     }
 }

@@ -63,4 +63,17 @@ class MissingNumberTest {
 
         assertEquals(1, result);
     }
+
+
+    @Test
+    void find_missing_number_e() {
+        List<Integer> numbers = new ArrayList<Integer>();
+        numbers.add(1);
+        numbers.add(2);
+        numbers.add(5);
+        numbers.add(6);
+        int result = missingNumber.findMissingEfficiently(numbers);
+
+        assertEquals(6, result);
+    }
 }

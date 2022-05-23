@@ -12,7 +12,7 @@ public class Fibonacci {
      * @param n the number of the Fibonacci sequence you want to return
      * @return The last number in the sequence.
      */
-    public int getFibonacci(int n) {
+    public int getFibonacciIterative(int n) {
 
         if (n == 0 || n == 1) {
             return n;
@@ -29,5 +29,17 @@ public class Fibonacci {
         }
 
         return reset;
+    }
+
+    public int getFibonacci(int n) {
+
+        if(n<0){
+            return -1;
+        }
+        if (n == 0 || n == 1) {
+            return n;
+        }
+
+        return getFibonacci(n-1) + getFibonacci(n-2);
     }
 }
