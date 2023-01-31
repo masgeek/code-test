@@ -32,7 +32,7 @@ public class AddTwoString {
      * It takes a string of numbers and converts it to an integer
      * 
      * @param numStr The string that you want to convert to a number.
-     * @return Integer equivalet of the string value
+     * @return Integer equivalent of the string value
      */
     private int convertToNumber(String numStr) {
         char[] nums = numStr.toCharArray();
@@ -49,11 +49,11 @@ public class AddTwoString {
      * It takes an integer and returns a string representation of that integer
      * 
      * @param num The number to be converted to a string
-     * @return The number euivalent in string format
+     * @return The number equivalent in string format
      */
     private String convertToString(int num) {
         int rem = num;
-        int modulusVal = num;
+        int modulusVal;
         String numString = "";
         while (rem > 0) {
             modulusVal = rem % 10;

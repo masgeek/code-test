@@ -1,12 +1,11 @@
 package com.munywele.arrays;
 
-import com.munywele.arrays.TwoSum;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class TwoSumTest {
 
@@ -24,7 +23,7 @@ class TwoSumTest {
         int[] nums = {1, 4, 11, 5, 12, 8, 10};
         int target = 19;
 
-        int[] result = twoSum.computeSum(nums, target,nums.length);
+        int[] result = twoSum.computeSum(nums, target, nums.length);
 
         System.out.print(Arrays.toString(result));
         assertArrayEquals(new int[]{2, 5}, result);
@@ -35,7 +34,7 @@ class TwoSumTest {
         int[] nums = {3, 2, 4};
         int target = 6;
 
-        int[] result = twoSum.computeSum(nums, target,nums.length);
+        int[] result = twoSum.computeSum(nums, target, nums.length);
 
         System.out.print(Arrays.toString(result));
         assertArrayEquals(new int[]{1, 2}, result);
@@ -50,5 +49,16 @@ class TwoSumTest {
 
         System.out.println(Arrays.toString(result));
         assertArrayEquals(new int[]{0, 1}, result);
+    }
+
+    @Test
+    void sum_test_4() {
+        int[] nums = {0, 1, 2, 5, 6};
+        int target = 7;
+
+        int[] result = twoSum.computeSum(nums, target, nums.length);
+
+        System.out.println(Arrays.toString(result));
+        assertArrayEquals(new int[]{2, 3}, result);
     }
 }
