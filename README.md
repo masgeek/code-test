@@ -1,1 +1,1 @@
-# Code test
+# JAVA Algorithms refreshers and tests

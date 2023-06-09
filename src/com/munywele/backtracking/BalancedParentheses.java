@@ -13,7 +13,7 @@ public class BalancedParentheses {
      * @return An ArrayList of Strings.
      */
     public ArrayList<String> generateCombinations(int n) {
-        ArrayList<String> result = new ArrayList<String>();
+        ArrayList<String> result = new ArrayList<>();
         if (n > 0) {
             String myResultString = "";
             StringBuilder myResultStringBuilder = new StringBuilder();
