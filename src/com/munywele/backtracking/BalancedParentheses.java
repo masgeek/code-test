@@ -33,6 +33,8 @@ public class BalancedParentheses {
      * @param size the number of pairs of parentheses
      * @param open number of open parentheses
      * @param close number of close parentheses we need to add
+     *
+     * @deprecated
      */
     private void generateParentheses(ArrayList<String> resultHolder, StringBuilder result, int size, int open, int close) {
         if (result.length() == size * 2) {
