@@ -32,4 +32,31 @@ class ArraySumTest {
 
         assertTrue(hasSumPairs);
     }
+
+    @Test
+    void check_stack_operations_returns_8() {
+        String operations = "4 5 6 - 7 +";
+
+        int stackValue = arraySum.stackOperations(operations);
+
+        assertEquals(8, stackValue);
+    }
+
+    @Test
+    void check_stack_operations_returns_7() {
+        String operations = "13 DUP 4 POP 5 DUP + DUP + -";
+
+        int stackValue = arraySum.stackOperations(operations);
+
+        assertEquals(7, stackValue);
+    }
+
+    @Test
+    void check_stack_operations_returns_negative_1() {
+        String operations = "5 6 + -";
+
+        int stackValue = arraySum.stackOperations(operations);
+
+        assertEquals(-1, stackValue);
+    }
 }
