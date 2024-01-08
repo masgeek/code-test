@@ -32,38 +32,39 @@ public class ArraySum {
         return false;
     }
 
-    public int stackOperations(String S) {
+    public int stackOperations(String stringValue) {
         // Implement your solution here
         Stack<Integer> stack = new Stack<>();
-        String[] operationsArr = S.split(" ");
+//        Deque<Integer> stack = new ArrayDeque<>();
+        String[] operationsArr = stringValue.split(" ");
 
         try {
             for (int x = 0; x < operationsArr.length; x++) {
                 switch (operationsArr[x]) {
-                    case "POP":
-                        stack.pop();
-                        break;
-                    case "DUP":
-                        int dupl = stack.pop();
-                        stack.push(dupl);
-                        stack.push(dupl);
-                        break;
-                    case "+":
-                        int topEl = stack.pop()+stack.pop();
+                    case "POP" -> stack.pop();
+                    case "DUP" -> {
+                        int duplicateValue = stack.pop();
+                        stack.push(duplicateValue);
+                        stack.push(duplicateValue);
+                    }
+                    case "+" -> {
+                        int topEl = stack.pop() + stack.pop();
                         stack.push(topEl);
-                        break;
-                    case "-":
-                        int subVal = stack.pop() - stack.pop();
+                    }
+                    case "-" -> {
+                        int firstSubVal = stack.pop();
+                        int secondSubVal = stack.pop();
+                        int subVal = firstSubVal - secondSubVal;
                         stack.push(subVal);
-                        break;
-                    default:
+                    }
+                    default -> {
                         String operation = String.valueOf(operationsArr[x]);
                         int itemToAdd = Integer.parseInt(operation); //handle integers at this level
                         stack.push(itemToAdd);
-                        break;
+                    }
                 }
             }
-            return stack.peek();
+            return stack.peek(); //get the element at top of stack without removing it
         } catch (Exception e) {
             return -1;
         }
